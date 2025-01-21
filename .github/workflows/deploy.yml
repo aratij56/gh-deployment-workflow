@@ -27,5 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-https://github.com/aratij56/gh-deployment-workflow.git
+          publish_dir: /Users/artijadhav/Knolens/devops/gh-deployment-workflow/index.html
+          publish_branch: gh-pages
