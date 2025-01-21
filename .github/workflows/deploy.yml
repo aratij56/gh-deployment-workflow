@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "index.html"
+      - "/Users/artijadhav/Knolens/devops/gh-deployment-workflow/index.html"
 
 jobs:
   deploy:
@@ -16,16 +16,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js (if required, for GitHub Pages)
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      # Step 3: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+     - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /Users/artijadhav/Knolens/devops/gh-deployment-workflow/index.html
+          publish_dir: "/Users/artijadhav/Knolens/devops/gh-deployment-workflow/index.html"  # Directory containing index.html
           publish_branch: gh-pages
